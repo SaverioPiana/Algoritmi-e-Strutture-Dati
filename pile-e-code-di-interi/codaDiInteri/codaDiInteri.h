@@ -15,5 +15,5 @@ codaDiInteri newCodaDiInteri(int size);
 void freeCodaDiInteri(codaDiInteri c);
 void printCodaDiInteri(codaDiInteri c);
 void enqueue(codaDiInteri c, int v);
-void dequeue(codaDiInteri c);
+int dequeue(codaDiInteri c);
 #endif

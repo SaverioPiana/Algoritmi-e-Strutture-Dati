@@ -7,8 +7,12 @@ int main(){
 	codaDiInteri mia_coda = newCodaDiInteri(4);
 
 	printCodaDiInteri(mia_coda);
-	for(int i=0; i<10 ; i++){
+	for(int i=0; i<3 ; i++){
 		enqueue(mia_coda, i);
+		printCodaDiInteri(mia_coda);
+	}
+	for(int i=0; i<4 ; i++){
+		printf("Dequeue Di (%d) <---\n", dequeue(mia_coda));
 		printCodaDiInteri(mia_coda);
 	}
 

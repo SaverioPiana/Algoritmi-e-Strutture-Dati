@@ -29,6 +29,7 @@ void printCodaDiInteri(codaDiInteri c){
 }
 
 void enqueue(codaDiInteri c, int v){
+	
 	if( (c->tail == c->head-1) ||
 		(c->tail == c->size-1) && c->head == 0){
 		// printf("ERRORE: Overflow della coda: enqueue di (%d)\n", v);
@@ -45,4 +46,16 @@ void enqueue(codaDiInteri c, int v){
 	c->A[c->tail] = v;
 	c->tail = (c->tail+1) % c->size;
 }
-void dequeue(codaDiInteri c);
+int dequeue(codaDiInteri c){
+
+	if( c->head == c->tail ){
+		printf("ERRORE: Underflow , dequeue da coda vuota\n");
+		exit(1);
+	}
+	int out = c->A[c->head];
+	c->head++;
+	if( c->head == c->size )
+		c->head = 0;
+
+	return out;
+}
