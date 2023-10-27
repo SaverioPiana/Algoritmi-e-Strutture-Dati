@@ -43,9 +43,6 @@ void enqueue(codaDiInteri c, int v){
 		}
 	}
 	c->A[c->tail] = v;
-	c->tail++;
-	if( c->tail == c->size)
-		c->tail = 0;
-		
+	c->tail = (c->tail+1) % c->size;
 }
 void dequeue(codaDiInteri c);
