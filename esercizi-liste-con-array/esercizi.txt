@@ -34,11 +34,30 @@ DELETE(l, i) // i e' un iteratore valido della lista l
 	else					// c'e' un elemento che mi precede
 		l.next[l.prev[i]] = l.next[i]  	// mi scavalco (il successivo del mio precedente
 										//				e' il mio successivo
-if( l.next[i] != -1)
-	l.prev[l.next[i]] = l.prev[i]
+	if( l.next[i] != -1)
+		l.prev[l.next[i]] = l.prev[i]
 
-free_column(l, i)
+	free_column(l, i)
 ==================================================
+DELETE(l, x) // x e' un intero. Cerca e cancella la prima occorrenza di x
+	i = l.head
+	while( i != -1 )
+
+		if(l.info[i] == x)
+		
+			if( l.head == i ) 		// i e' l'iteratore del primo elemento
+				l.head = l.next[i] 	//salto la colonna i
+			else					// c'e' un elemento che mi precede
+				l.next[l.prev[i]] = l.next[i]  	// mi scavalco (il successivo del mio precedente
+												//				e' il mio successivo
+			if( l.next[i] != -1)
+				l.prev[l.next[i]] = l.prev[i]
+
+			free_column(l, i)
+			return
+		i = l.next[i]
+==================================================
+
 
 
 
