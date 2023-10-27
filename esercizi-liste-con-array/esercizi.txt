@@ -1,0 +1,30 @@
+PSEUDOCODIFICA
+/* Cerca nella lista l, realizzata tramite array, il
+valore k e restituisci la posizione della prima occorrenza */
+
+head(l)
+	return l.head
+
+info(l,i)
+	return l.info[i]
+
+next(l,i)
+	return l.next[i]
+==================================================
+/* array "mascherato" */
+search(l, k)
+	int i = head(l)  // indice della prima colonna
+	while(i != -1)
+		if( info(l,i) == k )
+		return i
+		i = next(l,i)
+	return i // i e' uguale a -1
+==================================================
+search(l, k)
+	int i = l.head  // indice della prima colonna
+	while(i != -1)
+		if( l.info[i] == k )
+		return i
+		i = l.next[i]
+	return i // i e' uguale a -1
+==================================================
