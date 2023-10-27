@@ -31,13 +31,21 @@ void printCodaDiInteri(codaDiInteri c){
 void enqueue(codaDiInteri c, int v){
 	if( (c->tail == c->head-1) ||
 		(c->tail == c->size-1) && c->head == 0){
-		printf("ERRORE: Overflow della coda: enqueue di (%d)\n", v);
-		exit(1);
+		// printf("ERRORE: Overflow della coda: enqueue di (%d)\n", v);
+		// exit(1);
+		/*Gestione Telescopica*/
+		c->size*=2;
+		c->A = (int*)realloc(c->A, sizeof(int)*c->size);
+		if(c->head > c->tail){
+			for(int i = 0; i< c->tail; i++){
+				c->A[c->size/2+i] = c->A[i];
+			}
+		}
 	}
 	c->A[c->tail] = v;
 	c->tail++;
 	if( c->tail == c->size)
-		c->tail =0;
+		c->tail = 0;
 		
 }
 void dequeue(codaDiInteri c);
