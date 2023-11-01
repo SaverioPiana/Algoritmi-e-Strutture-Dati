@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h> // per usare printf
-#include "pila_di_interi/pila_di_interi.h"
-#include "codaDiInteri/codaDiInteri.h"
+#include "lista_struct/lista_s.h"
+//#include "pila_di_interi/pila_di_interi.h"
+//#include "codaDiInteri/codaDiInteri.h"
 
 int main(){
 	

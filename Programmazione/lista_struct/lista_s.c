@@ -1,6 +1,6 @@
+#include "lista_s.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include "lista_s.h"
 
 void insert_lista_s(lista_s* l, int n) {
 
@@ -28,7 +28,7 @@ int massimo_lista_s(lista_s l) {
       exit(1);
    }
 
-   int max = l->info
+   int max = l->info;
    item* x = l->next;
    while( x != NULL ) {
       if( x->info > max ) {
