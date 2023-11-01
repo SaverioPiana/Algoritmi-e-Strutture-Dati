@@ -18,7 +18,7 @@ int main(){
 
 	freeCodaDiInteri(mia_coda);
 
-	/*
+	/* ///////PILE////////
 	pila_di_interi mia_pila = new_pila_di_interi(4);
 
 	for(int i=0; i< 110; i++){
