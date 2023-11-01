@@ -15,7 +15,7 @@ SOMMA(l) /*  Ritorna la somma della lista di interi l
 MASSIMO(l) 	/*  Ritorna il valore massimo della lista di interi l
 				La lista e' ralizzata tramite oggetti e riferimenti */
 
-	if ( l.head == NULL ) //la lista e' vuota
+	if ( l.head == NULL ) 		// la lista e' vuota
 		error("Massimo su lista vuota") // si interrompe
 
 	max = l.head.info
@@ -38,8 +38,8 @@ SEARCH(l, u) /* l e' una lista realizzata con oggetti e riferimenti
 		if ( x.info == u )
 			return x
 		x = x.next
-	retun x 	// oppure return NULL, che e' lo stesso perche' x = NULL qui
-	
+	retun x 					// oppure return NULL, che e' lo stesso perche' x = NULL qui
+
 ===========================================	
 
 DELETE(l, i) /* rimuovere l'elemento puntato dall'iteratore i */
@@ -50,13 +50,43 @@ DELETE(l, i) /* rimuovere l'elemento puntato dall'iteratore i */
 	while ( x != NULL )
 		if ( x.next = i )		// x e' l'elemento che precede i
 			x.next = i.next		//sto saltando i
-			return
+			return				// questo return si puo' omettere
 		x = x.next
-	return
+	return						//questo return sarebbe implicito
 
 ===========================================	
 
-	
+PREV(l, i) 	/* rimuovere l'elemento che precede l'iteratore i */
+			/* se i e' il primo della lista ritorno NULL */
+			/* suppongo i appartenga alla lista */
 
+	x = l.head 
 
+	while ( x != NULL )
+		if ( x.next = i )		// x e' l'elemento che precede i
+			return x			// x precede i
+		x = x.next
+	return						// siccome i appartiene alla lista
+								// evidentemente era il primo
 
+===========================================	
+
+DELETE(l, u) 	/* cancella dalal lista l'elemento che contiene
+				   l'intero u
+
+	if( l.head == NULL) 		// lista vuota
+		return
+
+	if( l.head.info == u )		// eccezione: u e' nel primo elemento
+		l.head = l.head.next
+		return
+
+	prev = l.head
+	x = l.head.next
+	while ( x != NUll )
+		if( x.info == u) 		// l'ho trovato -> Devo rimuoverlo
+			prev.next = x.next 	// ho saltato x
+			return
+		prev = x
+		x = x.next
+		
