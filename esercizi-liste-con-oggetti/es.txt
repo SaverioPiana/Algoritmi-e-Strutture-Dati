@@ -86,7 +86,10 @@ DELETE(l, u) 	/* cancella dalal lista l'elemento che contiene
 	while ( x != NUll )
 		if( x.info == u) 		// l'ho trovato -> Devo rimuoverlo
 			prev.next = x.next 	// ho saltato x
-			return
+			return				// si puo omettere
 		prev = x
 		x = x.next
-		
+
+===========================================	
+
+
