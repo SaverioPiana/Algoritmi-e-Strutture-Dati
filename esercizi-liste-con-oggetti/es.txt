@@ -1,0 +1,13 @@
+PSEUDOCODICE
+MASSIMO(l) 	/*  Ritorna il valore massimo della lista di interi l
+				La lista e' ralizzata tramite oggetti e riferimenti */
+				
+	max = l.head.info
+
+	x = l.head.next
+	while ( x != NULL )
+		if ( x.info > max )
+			max = x.info
+		x = x.next
+	return max
+
