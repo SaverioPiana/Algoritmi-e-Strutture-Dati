@@ -1,10 +1,22 @@
-PSEUDOCODICE
+//////////////PSEUDOCODICE//////////////
+
+SOMMA(l) /*  Ritorna la somma della lista di interi l
+				La lista e' ralizzata tramite oggetti e riferimenti */	
+	sum = 0
+
+	x = l.head
+	while( x != NULL )
+		sum = sum+ x.info
+		x = x.next
+	return sum
+
+===========================================	
 MASSIMO(l) 	/*  Ritorna il valore massimo della lista di interi l
 				La lista e' ralizzata tramite oggetti e riferimenti */
 
 	if ( l.head == NULL ) //la lista e' vuota
 		error("Massimo su lista vuota") // si interrompe
-		
+
 	max = l.head.info
 
 	x = l.head.next
@@ -13,4 +25,8 @@ MASSIMO(l) 	/*  Ritorna il valore massimo della lista di interi l
 			max = x.info
 		x = x.next
 	return max
+
+===========================================	
+
+
 
