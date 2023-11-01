@@ -11,6 +11,7 @@ SOMMA(l) /*  Ritorna la somma della lista di interi l
 	return sum
 
 ===========================================	
+
 MASSIMO(l) 	/*  Ritorna il valore massimo della lista di interi l
 				La lista e' ralizzata tramite oggetti e riferimenti */
 
@@ -27,6 +28,35 @@ MASSIMO(l) 	/*  Ritorna il valore massimo della lista di interi l
 	return max
 
 ===========================================	
+
+SEARCH(l, u) /* l e' una lista realizzata con oggetti e riferimenti
+				u e' un intero */
+
+	x = l.head
+
+	while ( x != NULL )
+		if ( x.info == u )
+			return x
+		x = x.next
+	retun x 	// oppure return NULL, che e' lo stesso perche' x = NULL qui
+	
+===========================================	
+
+DELETE(l, i) /* rimuovere l'elemento puntato dall'iteratore i */
+			 /* se i non appartiene alla lista non faccio nulla */
+	
+	x = l.head 
+
+	while ( x != NULL )
+		if ( x.next = i )		// x e' l'elemento che precede i
+			x.next = i.next		//sto saltando i
+			return
+		x = x.next
+	return
+
+===========================================	
+
+	
 
 
 
