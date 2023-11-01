@@ -12,10 +12,10 @@ void insert_lista_s(lista_s* l, int n) {
 
 int somma_lista_s(lista_s l) {
 
-   int somma = 0
+   int somma = 0;
    item* x = l;
-   while(x != NULL) {
-      somma+= x->info;
+   while( x != NULL) {
+      somma += x->info;
       x = x->next;
    }
    return somma;
