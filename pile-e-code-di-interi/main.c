@@ -4,6 +4,27 @@
 #include "codaDiInteri/codaDiInteri.h"
 
 int main(){
+	
+	/* OPERAZIONI SU UNA LISTA SEMPLICEMENTE CONCATENATA DI INTERI */
+   
+   	lista_s l = NULL; // lista vuota
+
+   	insert_lista_s(&l, 1);
+   	insert_lista_s(&l, 2);
+   	int i;
+   	for(i = 3 ; i < 20; i++) {
+   		insert_lista_s(&l,-i);
+  	}
+  	print_lista_s(l);
+
+  	printf("la somma degli elementi della lista e' %d\n", somma_lista_s(l));
+  	printf("il massimo degli elementi della lista e' %d\n", massimo_lista_s(l));
+
+  	printf("la ricerca di -5 produce NULL? %d\n",search_lista_s(l,-5) == NULL);
+  	printf("la ricerca di +5 produce NULL? %d\n",search_lista_s(l,5) == NULL);
+
+
+	/*////////CODE/////////
 	codaDiInteri mia_coda = newCodaDiInteri(4);
 
 	printCodaDiInteri(mia_coda);
@@ -17,7 +38,7 @@ int main(){
 	}
 
 	freeCodaDiInteri(mia_coda);
-
+	*/
 	/* ///////PILE////////
 	pila_di_interi mia_pila = new_pila_di_interi(4);
 
