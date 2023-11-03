@@ -16,7 +16,16 @@ int main(){
    	for(i = 3 ; i < 20; i++) {
    		insert_lista_s(&l,-i);
   	}
+
   	print_lista_s(l);
+  	cancella_lista_s_elem(&l, 2);
+ 	print_lista_s(l);
+ 	printf("faccio un push di 15\n");
+ 	push_lista_s(&l, 15);
+ 	print_lista_s(l);
+ 	printf("faccio un pop\n");
+ 	pop_lista_s(&l);
+ 	print_lista_s(l);
 
   	printf("la somma degli elementi della lista e' %d\n", somma_lista_s(l));
   	printf("il massimo degli elementi della lista e' %d\n", massimo_lista_s(l));

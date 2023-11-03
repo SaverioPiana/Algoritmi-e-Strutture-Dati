@@ -22,14 +22,22 @@ typedef struct lis {
 } lista;
 */
 
-void insert_lista_s(lista_s* l, int n);
+void insert_lista_s(lista_s* l, int v);
 
 int somma_lista_s(lista_s l);
 
 int massimo_lista_s(lista_s l);
 
-item* search_lista_s(lista_s l, int n);
+item* search_lista_s(lista_s l, int v);
 
 void print_lista_s(lista_s l);
+
+void cancella_lista_s(lista_s* l, item* i);
+
+void cancella_lista_s_elem(lista_s* l, int v);
+
+void push_lista_s(lista_s* l, int v);
+
+int pop_lista_s(lista_s* l);
 
 #endif
